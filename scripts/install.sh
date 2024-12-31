@@ -10,10 +10,10 @@ if command -v brew >/dev/null 2>&1; then
 	brew install 'autoenv'
 	dot_sh_file="'$(brew --prefix autoenv)/activate.sh'"
 elif command -v npm >/dev/null 2>&1; then
-	npm install -g '@hyperupcall/autoenv'
-	dot_sh_file="'$(npm root -g)/@hyperupcall/autoenv/activate.sh'"
+	npm install -g '@fuzmik/autoenv'
+	dot_sh_file="'$(npm root -g)/@fuzmik/autoenv/activate.sh'"
 elif command -v git >/dev/null 2>&1; then
-	git clone 'https://github.com/hyperupcall/autoenv' ~/.autoenv
+	git clone 'https://github.com/fuzmik/autoenv' ~/.autoenv
 	dot_sh_file="~/.autoenv/activate.sh"
 else
 	printf '%s\n' "Failed to install autoenv. Please install 'brew', 'npm', or 'git' first." >&2
